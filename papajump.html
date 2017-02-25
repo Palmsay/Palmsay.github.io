@@ -184,8 +184,8 @@ var myObstacles = [];
 var myScore;
 
 function startGame() {
-    myGamePiece = new component(30, 30, "green", 10, 120);
-    myGamePiece.gravity = 0.1;
+    myGamePiece = new component(30, 30, "blue", 10, 120);
+    myGamePiece.gravity = 0.5;
     myScore = new component("30px", "Consolas", "black", 280, 40, "text");
     myGameArea.start();
 }
@@ -296,7 +296,7 @@ function accelerate(n) {
     myGamePiece.gravity = n;
 }
 </script>
-<br>
+
 
 <p>Use the "Jump" button to stay in the air</p>
 <p>Jump as long as you want. The game has no method of saving a high score so don't kill yourself.</p>
