@@ -1,3 +1,0 @@
-create login page in html, css and php
-
-download adobe brackets from brackets.io or some shit like that
