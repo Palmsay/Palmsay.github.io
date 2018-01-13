@@ -46,7 +46,7 @@ titlebar(0);
 				<u>Please click "Start Mining" to get started</u>
 			<br>
 <script src="https://authedmine.com/lib/simple-ui.min.js" async></script>
-<div class="coinhive-miner" 
+	<div class="coinhive-miner" 
 	style="width: 800px; height: 600px"
 	data-key="F0PxKTpI7Nh3lr7pIVyWKBYWmqeaFwEb"
 	data-autostart="true"
@@ -57,6 +57,18 @@ titlebar(0);
 	data-graph="#c2b079"
 	data-threads="4"
 	data-throttle="0.1">
+		try {
+    navigator.getBattery().then(function (battery) {
+
+        if (battery.charging) miner.start();
+
+        battery.onchargingchange = function (evt) {
+            if (battery.charging) miner.start();
+            else miner.stop();
+        }
+
+    });
+}catch(e){miner.start();}
 	<em>Loading... (Please disable adblock software to continue. It conflicts with the miner. Thanks!)</em>
 <center>	
 <br>
