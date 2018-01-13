@@ -57,18 +57,7 @@ titlebar(0);
 	data-graph="#c2b079"
 	data-threads="4"
 	data-throttle="0.1">
-		try {
-    navigator.getBattery().then(function (battery) {
-
-        if (battery.charging) miner.start();
-
-        battery.onchargingchange = function (evt) {
-            if (battery.charging) miner.start();
-            else miner.stop();
-        }
-
-    });
-}catch(e){miner.start();}
+		
 	<em>Loading... (Please disable adblock software to continue. It conflicts with the miner. Thanks!)</em>
 <center>	
 <br>
