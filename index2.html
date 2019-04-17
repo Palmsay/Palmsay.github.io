@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>p a l m s a y</title>
+<link rel="shortcut icon" href="ico.png">
+<link rel="stylesheet" href="terminal.css" />
+
+<script type="text/javascript">
+var rev = "fwd";
+function titlebar(val)
+{
+var msg = "p a l m s a y";
+var res = " ";
+var speed = 75;
+var pos = val;
+msg = "p a l m s a y";
+var le = msg.length;
+if(rev == "fwd"){
+if(pos < le){
+pos = pos+1;
+scroll = msg.substr(0,pos);
+document.title = scroll;
+timer = window.setTimeout("titlebar("+pos+")",speed);}
+else{
+rev = "bwd";
+timer = window.setTimeout("titlebar("+pos+")",speed);}}
+else{
+if(pos > 0){
+pos = pos-1;
+var ale = le-pos;
+scrol = msg.substr(ale,le);
+document.title = scrol;
+timer = window.setTimeout("titlebar("+pos+")",speed);}
+else{
+rev = "fwd";
+timer = window.setTimeout("titlebar("+pos+")",speed);
+}}}
+titlebar(0);
+</script>
+
+</head>
+<body>
+<header class="terminal-logo">
+<div class="logo terminal-prompt"><a href="https://palmsay.github.io" class="no-style">p a l m s a y</a></div>
+</header>
+
+<p>Welcome to Palmsay's home on the internet. This page is pretty basic. I made it mostly to host my small projects and mess around with HTML/CSS.</p>
+<p>I plan to slowly start adding content to this page. I am mainly interested in vintage computing (surrounding the 680x0 processors) and cryptography.</p> 
+<p>Thank you for your visit.</p>
+<p>palmsay — 2019</p>
+
+</body>
+</html>
+		
